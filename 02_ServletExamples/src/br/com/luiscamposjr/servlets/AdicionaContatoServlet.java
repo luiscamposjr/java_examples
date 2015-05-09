@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import br.com.luiscamposjr.dao.ContatoDAO;
-//import br.com.luiscamposjr.model.Contato;
+import br.com.luiscamposjr.dao.ContatoDAO;
+import br.com.luiscamposjr.model.Contato;
 
 @WebServlet("/adicionaContato")
 public class AdicionaContatoServlet extends HttpServlet {
@@ -47,14 +47,14 @@ public class AdicionaContatoServlet extends HttpServlet {
 		
 //Com código do exemplo 01 é possível descomentar o codigo abaixo.
 		
-//		Contato contato = new Contato();
-//		contato.setNome(nome);
-//		contato.setEmail(email);
-//		contato.setEndereco(endereco);
-//		contato.setDataNascimento(dataNascimento);
-//		
-//		ContatoDAO contatoDAO = new ContatoDAO();
-//		contatoDAO.adiciona(contato);
+		Contato contato = new Contato();
+		contato.setNome(nome);
+		contato.setEmail(email);
+		contato.setEndereco(endereco);
+		contato.setDataNascimento(dataNascimento);
+		
+		ContatoDAO contatoDAO = new ContatoDAO();
+		contatoDAO.adiciona(contato);
 		
 		
 		out.println("<html>");
