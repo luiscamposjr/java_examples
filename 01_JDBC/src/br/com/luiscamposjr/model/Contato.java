@@ -1,5 +1,6 @@
 package br.com.luiscamposjr.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Contato {
@@ -39,6 +40,19 @@ public class Contato {
 	}
 	public void setDataNascimento(Calendar dataNascimento) {
 		this.dataNascimento = dataNascimento;
+	}
+	
+	@Override
+	public String toString() {
+		
+		SimpleDateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+		
+		return "Id: " + this.getId() + "\n" + 
+				"Nome: " + this.getNome() + "\n" + 
+				"Email: " + this.getEmail() + "\n" + 
+				"Endereço: " + this.getEndereco() + "\n" + 
+				"Data de Nascimento: " + dataFormatada.format(this.getDataNascimento().getTime()) + "\n";
+		
 	}
 
 }
